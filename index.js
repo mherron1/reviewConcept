@@ -1,6 +1,6 @@
 const googlesheetsID = "1evyjvVPsZWZI4VTV1P_4DDzbW4rUbK2HGXVUJQ_3iUA"
 
-const review_page_container = document.querySelector("#container")
+const review_page_container = document.querySelector("#review_page_container")
 
 //https://docs.google.com/spreadsheets/d/1evyjvVPsZWZI4VTV1P_4DDzbW4rUbK2HGXVUJQ_3iUA/edit?usp=sharing
 
@@ -26,7 +26,7 @@ fetch(url)
    reviewArray.forEach(review=>{
 
     review_page_container.innerHTML +=  `
-       <div class="box">
+       <div class="box_review">
         <h4>${review.name}</h4>
         <p>${review.email}</p>
         <p>${review.phone}</p>
