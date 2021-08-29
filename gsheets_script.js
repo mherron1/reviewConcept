@@ -14,7 +14,7 @@ fetch(url)
 .then (data =>{
     const json = JSON.parse(data.substr(47).slice(0, -2))
    json.table.rows.forEach(row=>{
-           reviewArray.push({
+           reviewArray.unshift({
                name: row.c[1].v,
                email: row.c[2].v,
                phone: row.c[3].v,
