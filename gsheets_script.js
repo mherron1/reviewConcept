@@ -26,13 +26,16 @@ fetch(url)
    reviewArray.forEach(review=>{
 
     review_page_container.innerHTML +=  `
-       <div class="box_review">
-        <h4>${review.name}</h4>
-        <p>${review.email}</p>
-        <p>${review.phone}</p>
-        <p>${review.message}</p>
-        <img style="height:175px; width:175px;" src="${review.review_image}" />
-       </div>
+       <div class="box_review" style="background-image: url(${review.review_image});">
+         <div class="overlay">
+            <div class="contents">
+            <h4>Name: ${review.name}</h4>
+            <p>Email: ${review.email}</p>
+            <p>Phone: ${review.phone}</p>
+            <p style="font-size:1.2rem">"${review.message}"</p>
+            </div>
+         </div>  
+      </div>
   `
 })
 })
