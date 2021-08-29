@@ -25,7 +25,7 @@ fetch(url)
    
    reviewArray.forEach(review=>{
 
-    if(review.name != ""){
+    if(review.name != "contact[name]"){
 
         review_page_container.innerHTML +=  `
         <div class="box_review" style="background-image: url(${review.review_image});">
